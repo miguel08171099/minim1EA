@@ -1,0 +1,24 @@
+<div class="row justify-content-center" *ngIf="sede  as sede">
+    <div class="col-md-8 order-md-1">
+      <h4 class="mb-3" style="margin-top: 30px;">Dades de la sede</h4>
+      <form class="needs-validation" novalidate>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="nombreSede">Nom</label>
+            <input #nombreSede type="text" class="form-control" id="nombreSede"  value="{{this.sede.nombreSede}}">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="localizacion">Localització</label>
+            <input #localizacion type="text" class="form-control" id="localizacion"  value="{{this.sede.localizacion}}">
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label for="poblacion">Població</label>
+            <input #poblacion type="text" class="form-control" id="poblacion"  value="{{this.sede.poblacion}}">
+          </div>
+        <div>
+            <button  class="btn-desa" (click)="updateSede(nombreSede.value, localizacion.value, poblacion.value)">Desa els canvis</button> 
+        </div>
+      </form>
+    </div>
+  </div>

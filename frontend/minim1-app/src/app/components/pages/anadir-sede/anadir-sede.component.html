@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-md-8 order-md-1">
+      <h4 class="mb-3" style="margin-top: 30px;">Dades de la nova sede</h4>
+      <form>
+          <div class="col-md-6 mb-3">
+            <label for="nombreSede">Nom</label>
+            <input #nombreSede type="text" class="form-control" id="nombreSede" value="">
+            <div class="invalid-feedback">
+              El nom es un camp obligatori.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="localizacion">Localització</label>
+            <input #localizacion type="text" class="form-control" id="localizacion">
+            <div class="invalid-feedback">
+              Si us plau, introdueix la localització de la sede.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="poblacion">Població</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">@</span>
+              </div>
+              <input #poblacion type="text" class="form-control" id="poblacion">
+              <div class="invalid-feedback" style="width: 100%;">
+                La població es un camp obligatori.
+              </div>
+            </div>
+          </div>
+        <div>
+          <button  class="btn-desa" (click)="addSede(nombreSede.value,localizacion.value,poblacion.value)">Afegeix sede</button> 
+      </div>
+      </form>
+    </div>
